@@ -14,3 +14,9 @@ define("VIEWS", BASE_PATH . '/app/views/');
 
 //MODELS
 define("MODELS", BASE_PATH . '/app/models/');
+
+// Set database variables
+define('DB_HOST','localhost');
+define('DB_USER','yogi');
+define('DB_PWD','archdb');
+define('DB_NAME','employees');
