@@ -15,7 +15,6 @@ class Database {
     {
         // set PDO connection
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
-        // $dsn = 'mysql:unix_socket=/run/mysqld/mysqld.sock;dbname=' . $this->dbname;
         $options = [
             PDO::ATTR_PERSISTENT => true,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
@@ -24,10 +23,12 @@ class Database {
         try {
             
             $this->connection = new PDO($dsn, $this->user, $this->pwd, $options);
+            $this->dbConnected = true;
 
         } catch (PDOException $e) {
             
             $this->error = $e->getMessage() . PHP_EOL;
+            $this->dbConnected = false;
 
         }
         

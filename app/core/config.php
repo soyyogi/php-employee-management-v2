@@ -19,4 +19,4 @@ define("MODELS", BASE_PATH . '/app/models/');
 define('DB_HOST','localhost');
 define('DB_USER','yogi');
 define('DB_PWD','archdb');
-define('DB_NAME','employees');
+define('DB_NAME','ems');
