@@ -86,13 +86,10 @@ function render(employees) {
                 visible: false
             },
             {name: "name", type: "text", width: "auto"},
-            {name: "lastName", type: "text", width: "auto"},
+            {name: "last_name", type: "text", width: "auto"},
             {name: "email", type: "email", width: "auto"},
             // TODO // auto select gender from data //
-            {
-                name: "gender", type: "select",
-                items: ['male', 'female', 'non binary'], width: "auto"
-            },
+            {name: "gender", type: "text", width: "auto"},
             {name: "age", type: "number", width: "auto"},
             {type: "control", headercss: 'custom-add__header'},
         ],
