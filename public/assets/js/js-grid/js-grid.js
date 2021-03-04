@@ -18,9 +18,11 @@ export function changeData(request, data, args) {
     })
 }
 
-const employees = changeData('GET', 'getAllEmployees', 0).then(response => {
-    render(JSON.parse(response))
-})
+// const employees = changeData('GET', 'getAllEmployees', 0).then(response => {
+//     render(JSON.parse(response))
+// })
+
+render(employees);
 
 function render(employees) {
     $('#grid').jsGrid({
