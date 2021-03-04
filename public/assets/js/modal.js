@@ -33,7 +33,7 @@ export const modal = {
                 </div>
                 <div class="employee-modal__pair">
                     <label>Last Name</label>
-                    <input name="lastName" class="employee-modal-input" id="employee-modal-input__lastName" value="${employee ? employee.last_name : ''}" required pattern="^[A-Za-z]{2,10}" ${action}></input>
+                    <input name="last_name" class="employee-modal-input" id="employee-modal-input__last_name" value="${employee ? employee.last_name : ''}" required pattern="^[A-Za-z]{2,10}" ${action}></input>
                 </div>
                 <div class="employee-modal__pair">
                     <label>Age</label>
@@ -51,7 +51,7 @@ export const modal = {
             <div class="employee-modal__inputs-container">
                 <div class="employee-modal__pair">
                     <label>Phone</label>
-                    <input name='phone' class="employee-modal-input" id="employee-modal-input__phoneNumber" value="${employee ? employee.phone_number : ''}" pattern="^[0-9]{9,13}" required ${action}></input>
+                    <input name='phone' class="employee-modal-input" id="employee-modal-input__phone_number" value="${employee ? employee.phone_number : ''}" pattern="^[0-9]{9,13}" required ${action}></input>
                 </div>
                 <div class="employee-modal__pair">
                     <label>State</label>
@@ -63,11 +63,11 @@ export const modal = {
                 </div>
                 <div class="employee-modal__pair">
                     <label>ZIP</label>
-                    <input name="postalCode" class="employee-modal-input" id="employee-modal-input__postalCode" value="${employee ? employee.postal_code : ''}" pattern="[0-9]{5}" required ${action}></input>
+                    <input name="postal_code" class="employee-modal-input" id="employee-modal-input__postal_code" value="${employee ? employee.postal_code : ''}" pattern="[0-9]{5}" required ${action}></input>
                 </div>
                 <div class="employee-modal__pair">
                     <label>Address</label>
-                    <input name="streetAddress" class="employee-modal-input" id="employee-modal-input__streetAddress" value="${employee ? employee.street_address : ''}" pattern="^[A-Za-z0-9 ]{5,20}" required ${action}></input>
+                    <input name="street_address" class="employee-modal-input" id="employee-modal-input__street_address" value="${employee ? employee.street_address : ''}" pattern="^[A-Za-z0-9 ]{5,20}" required ${action}></input>
                 </div>
             </div>`
         return template;
@@ -75,20 +75,20 @@ export const modal = {
     checkInputs: function () {
         const form = document.forms[0];
         const inputNames = [
-            'name', 'lastName', 'age', 'gender', 'email',
-            'phone', 'state', 'city', 'postalCode', 'streetAddress'
+            'name', 'last_name', 'age', 'gender', 'email',
+            'phone', 'state', 'city', 'postal_code', 'street_address'
         ]
         const regExp = {
             name: '^[A-Za-z]{2,10}',
-            lastName: '^[A-Za-z]{2,10}',
+            last_name: '^[A-Za-z]{2,10}',
             email: '^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$',
             city: '^[A-Za-z]{2,20}',
             age: '^[0-9]{0,2}',
             gender: '^[A-Za-z ]{2,10}',
             phone: '^[0-9]{9,13}',
             state: '^[A-Za-z ]{2,10}',
-            streetAddress: '^[A-Za-z0-9 ]{5,20}',
-            postalCode: '[0-9]{5}',
+            street_address: '^[A-Za-z0-9 ]{5,20}',
+            postal_code: '[0-9]{5}',
         }
         const result = [];
         inputNames.forEach(key => {
