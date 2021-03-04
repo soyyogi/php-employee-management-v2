@@ -7,12 +7,11 @@ class EmployeeModel {
         return $db->resultSet();
     }
 
-    public function getemployee($array)
+    public function getemployee($id)
     {
         $db = new Database;
-        $db->query('SELECT * FROM employees WHERE name=:name AND last_name=:last');
-        $db->bind(':name', $array['name']);
-        $db->bind(':last', $array['last_name']);
+        $db->query('SELECT * FROM employees WHERE id=:id');
+        $db->bind(':id', $id);
         return $db->singleRecord();
     }
 

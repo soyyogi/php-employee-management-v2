@@ -4,26 +4,17 @@ Class Employee extends Controller
 {
 	public function index()
 	{
- 	 	
- 	 	// here goes logic
-
-		$this->view('dashboard');
-	}
-
-    public function getallemployees()
-    {
         $model = $this->loadModel('EmployeeModel');
         $data = $model->getallemployees();
 
         $this->view('dashboard', $data);
-    }
+	}
 
-    public function getemployee(array ...$query)
+    public function id($id)
     {
-        
         $model = $this->loadModel('EmployeeModel');
-        $data = $model->getemployee($_GET);
-
-        $this->view('dashboard', $data);
+        $data = $model->getemployee($id);
+        
+        $this->view('employee', $data);
     }
 }
