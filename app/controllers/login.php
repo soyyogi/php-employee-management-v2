@@ -10,4 +10,8 @@ Class Login extends Controller
 		$this->view('login');
 	}
 
+	function auth()
+	{	
+		show($_POST);
+	}
 }
