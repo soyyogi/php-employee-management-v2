@@ -26,4 +26,14 @@ Class Employee extends Controller
         
         $this->view('employee');
     }
+
+    public function save()
+    {
+        require CORE . 'session.php';
+        
+        $model = $this->loadModel('EmployeeModel');
+        $model->saveemployee($_POST);
+
+        header("Location: http://localhost/php-employee-management-v2/employee");
+    }
 }

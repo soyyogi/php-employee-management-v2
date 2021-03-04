@@ -3,7 +3,7 @@ $employeeArray = json_decode(json_encode($data), true);
 
 ?>
 
-<form id="employee-form" class="container">
+<form id="employee-form" method="POST" action="http://localhost/php-employee-management-v2/employee/save" class="container">
     <div class="form-row">
         <div class="form-group col-sm-6">
             <label for="inputName4">Name</label>
