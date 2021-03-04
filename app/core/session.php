@@ -3,7 +3,7 @@ session_start();
 
 if(isset($_SESSION["user"]))  
 { 
-    if(time()-$_SESSION["login_time_stamp"] >60)   
+    if(time()-$_SESSION["login_time_stamp"] > 600)   
     { 
         session_unset(); 
         session_destroy(); 
