@@ -19,4 +19,11 @@ Class Employee extends Controller
         
         $this->view('employee', $data);
     }
+
+    public function add()
+    {
+        require CORE . 'session.php';
+        
+        $this->view('employee');
+    }
 }
