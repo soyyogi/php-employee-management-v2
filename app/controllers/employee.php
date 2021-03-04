@@ -4,6 +4,7 @@ Class Employee extends Controller
 {
 	public function index()
 	{
+        require CORE . 'session.php';
         $model = $this->loadModel('EmployeeModel');
         $data = $model->getallemployees();
 
@@ -12,6 +13,7 @@ Class Employee extends Controller
 
     public function id($id)
     {
+        require CORE . 'session.php';
         $model = $this->loadModel('EmployeeModel');
         $data = $model->getemployee($id);
         

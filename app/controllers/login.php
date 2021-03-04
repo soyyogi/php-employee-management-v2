@@ -24,4 +24,11 @@ Class Login extends Controller
 			header('location: http://localhost/php-employee-management-v2/');
 		}
 	}
+
+	function die()
+	{
+		session_unset(); 
+        session_destroy(); 
+        header("Location: http://localhost/php-employee-management-v2");
+	}
 }

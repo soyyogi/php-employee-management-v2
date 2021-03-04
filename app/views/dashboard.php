@@ -13,6 +13,4 @@
 <script defer type="module" src="./assets/js/js-grid/js-grid.js"></script>
 
 <?php
-require CORE . 'session.php';
-
 echo '<div id="grid" class="grid"></div>';
