@@ -1,0 +1,36 @@
+.width100 {
+    width: 95vw;
+    margin: 0 auto;
+}
+
+.none {
+    display: none;
+}
+
+.absolute-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.from-right {
+    right: -50vw;
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.child-click {
+   pointer-events: none;
+}
+
+.employee-modal__pair .wrong-input {
+    border: 2px solid var(--wrong);
+    /* background-color: rgba(255, 0, 0, 0.2); */
+}

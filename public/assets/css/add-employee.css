@@ -1,0 +1,29 @@
+.custom-add {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.custom-add:hover {
+    /* transition: 0.2s; */
+}
+
+.custom-add:active {
+    /* border: 2px solid var(--yellow); */
+    transition: 0.1s;
+}
+
+.custom-add-position {
+    /* position: fixed; */
+}
+
+.custom-add span {
+    font-size: 2rem;
+    color: var(--cream);
+}
+.custom-add span:hover {
+    color: var(--white);
+    transition: 0.2s;
+}
+.custom-add span:active {
+    transition: 0.1s;
+}
