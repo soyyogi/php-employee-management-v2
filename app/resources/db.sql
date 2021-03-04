@@ -20,6 +20,14 @@ state VARCHAR(50),
 postal_code INT(5) 
 );
 
+
+CREATE TABLE users(
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(50) NOT NULL,
+email VARCHAR(50) UNIQUE,
+password VARCHAR(128) NOT NULL
+);
+
 -- Insert of data
 
 INSERT INTO employees (name, last_name, email, gender, avatar, age, phone_number, city, street_address, state, postal_code)
@@ -34,3 +42,8 @@ VALUES
 ("Rack", "Jackon", "rack@network.com", "male", NULL, 22, 638362767, "New York", "126", "CA", "68573"),
 ("Homer", "Eustasio", "homer@gmail.com", "male", NULL, 34, 638362767, "New York", "126", "CA", "09857"),
 ("Sandra", "Foo", "sandra@foo.com", "female", NULL, 34, 638362767, "New York", "126", "CA", "09274");
+
+
+INSERT INTO users (name, email, password)
+VALUES 
+("admin", "admin@assemblerschool.com", "$2y$10$nuh1LEwFt7Q2/wz9/CmTJO91stTBS4cRjiJYBY3sVCARnllI.wzBC");
