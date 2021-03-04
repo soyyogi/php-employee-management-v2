@@ -12,5 +12,3 @@ include_once './assets/html/header.php';
 require_once '../app/init.php';
 
 $app = new App();
-
-include_once './assets/html/footer.php';
